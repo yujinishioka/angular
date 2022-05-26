@@ -1,0 +1,4 @@
+Erro deve estar na instalação do express
+
+npm start: node server.js (dentro da api)
+ng serve --o (dentro de gatitobook)
