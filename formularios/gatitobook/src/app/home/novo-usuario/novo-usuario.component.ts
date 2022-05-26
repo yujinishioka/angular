@@ -28,7 +28,7 @@ export class NovoUsuarioComponent implements OnInit {
       userName: ['', [minusculoValidator], [this.usuarioExistenteService.usuarioJaExiste()],],
       password: [''],
     }, {
-      validators: { usuarioSenhaIguaisValidator },
+      validators: [ usuarioSenhaIguaisValidator ],
     });
     console.log("novoUsuarioForm: ")
     console.log(this.novoUsuarioForm)
