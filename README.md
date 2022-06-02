@@ -1,7 +1,8 @@
 # Angular
-Estudo realizados de Angular
 
-## Iniciando com Angluar
+Estudos realizados de Angular.
+
+## Iniciando com Angular
 
 Instalando o Angular globalmente na máquina (versão 10.1.6, é a versão utilizada nas aulas), e para este primeiro projeto.
 ```
