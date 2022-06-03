@@ -6,13 +6,12 @@ import { KeyboardManagedItemDirective } from "./keyboard-managed-item-directive"
 })
 export class KeyboardManagerDirective {
 
-  @ContentChildren(KeyboardManagerDirective) public items: QueryList<KeyboardManagedItemDirective> = null
+  @ContentChildren(KeyboardManagedItemDirective) public items: QueryList<KeyboardManagedItemDirective> = null
 
   @HostListener('keyup', ['$event'])
   public manageKeys(event: KeyboardEvent): void {
     switch (event.key) {
       case 'ArrowUp':
-        console.log(this.items)
         console.log('up');
         this.moveFocus(ArrowDirection.RIGHT).focus();
         break;
@@ -22,6 +21,8 @@ export class KeyboardManagerDirective {
         break;
       case 'ArrowDown':
         console.log('down');
+        console.log('items:')
+        console.log(this.items)
         this.moveFocus(ArrowDirection.LEFT).focus();
         break;
       case 'ArrowLeft':

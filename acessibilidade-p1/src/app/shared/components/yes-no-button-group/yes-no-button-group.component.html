@@ -8,6 +8,7 @@
     appKeyboardManagedItem
     (focused)="activate(options.YES)"
     role="radio"
+    [attr.disabled]="disabled ? disabled : null"
     [attr.aria-checked]="value === options.YES"
     [attr.tabindex] = "value === options.YES || value === null ? 0 : -1"
     type="button"
@@ -20,9 +21,9 @@
     appKeyboardManagedItem
     (focused)="activate(options.NO)"
     role="radio"
+    [attr.disabled]="disabled ? disabled : null"
     [attr.aria-checked]="value === options.NO"
     [attr.tabindex] = "value === options.NO ? 0 : -1"
-    tabindex="-1"
     type="button"
     class="button button-no"
     [class.button-pressed]="value === options.NO"
@@ -30,3 +31,31 @@
     No
   </button>
 </div>
+
+
+<!--
+<div
+  class="button-group"
+  role="radiogroup"
+  [attr.aria-label] = "label"
+><label>{{ label }}</label>
+  <div class="radio">
+    <input
+      type="radio"
+      [attr.id] = "id + '-yes'"
+      [attr.name] = "id"
+      [attr.checked] = "value === options.YES"
+      (change) = "activate(options.YES)">
+      <label [attr.for] = "id + '-yes'" class="button button-yes">Yes</label>
+  </div>
+  <div class="radio">
+    <input
+      type="radio"
+      [attr.id] = "id + '-no'"
+      [attr.name] = "id"
+      [attr.checked] = "value === options.NO"
+      (change) = "activate(options.NO)">
+      <label [attr.for] = "id + '-no'" class="button button-no">No</label>
+  </div>
+</div>
+-->
